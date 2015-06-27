@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Services;
 use Illuminate\Http\Request;
+use Illuminate\Database;
+use Illuminate\Database\Eloquent\Model;
 
 class PaymentController extends Controller {
 
@@ -37,7 +40,11 @@ class PaymentController extends Controller {
             'receipt_email' => $user->email,
         ]);
 
-        return redirect($this->homePath());
+        // $service = \App\Services;
+
+        // $service->setupServices($request);
+
+        // return redirect($this->homePath());
 
     }
 
