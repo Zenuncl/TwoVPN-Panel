@@ -1,4 +1,6 @@
-<?php namespace App;
+<?php 
+
+namespace App;
 
 use Laravel\Cashier\Billable;
 use Illuminate\Auth\Authenticatable;
@@ -22,13 +24,14 @@ class Services extends Model{
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['username', 'op', 'value'];
+	protected $fillable = ['username', 'Attribute', 'op', 'value'];
 
+	public $timestamps = false;
 
-	public function setupServices(Request $request)
-	{
+	// public function setupServices(Request $request)
+	// {
 
-			DB::insert("INSERT INTO $table (Username, Attribute, op, Value) VALUES ($request->get('account'), 'MD5-Password', ':=', $request->get('password')')");
+	// 		DB::insert("INSERT INTO $table (Username, Attribute, op, Value) VALUES ($request->get('account'), 'MD5-Password', ':=', $request->get('password')')");
 
-	}
+	// }
 }

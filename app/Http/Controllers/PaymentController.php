@@ -29,22 +29,21 @@ class PaymentController extends Controller {
     {
         $user = \App\User::find(1);
 
-        // $user->subscription($request->get('plan'))->create(, [
-        //         'email' => $user->email
-        //     ]);
-
-
         $user->charge($request->get('price'), [
             //'source' => $request->get('StripeToken'),
             'source' => $request->get('stripeToken'),
             'receipt_email' => $user->email,
         ]);
 
-        // $service = \App\Services;
+        $services = new \App\Services;
+        $services->Username = $request->get('account');
+        $services->Attribute = "MD5-Password";
+        $services->op = ":=";
+        $services->Value = md5($request->get('password'));
 
-        // $service->setupServices($request);
+        $services->save();
 
-        // return redirect($this->homePath());
+        return redirect($this->homePath());
 
     }
 
