@@ -42,7 +42,7 @@ Route::controllers([
 	'user/password' => 'Auth\PasswordController',
 ]);
 
-Route::get('home/pay', [
+Route::get('home/services/kingston/buy', [
 	'as' => 'payment',
 	'uses' => 'PaymentController@index'
 ]);

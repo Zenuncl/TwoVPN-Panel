@@ -26,7 +26,7 @@
 						<p> 本服务现在由AnyConnect提供技术支持，稍后将支持IPSec VPN，Pac自动路由等</p>
 						<p> 本服务提供7天无条件退款</p>
 						<br>
-						<a href="#" class="btn btn-blue btn-icon btn-icon-standalone btn-icon-standalone-right">
+						<a href="{{route('payment')}}" class="btn btn-blue btn-icon btn-icon-standalone btn-icon-standalone-right">
 							<i class="fa-plane"></i>
 							<span>立即起航</span>
 						</a>
