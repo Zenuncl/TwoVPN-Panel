@@ -35,14 +35,14 @@
 					<!-- add class "multiple-expanded" to allow multiple submenus to open -->
 					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
 					<li>
-						<a href="#">
+						<a href="{{url('/home/')}}">
 							<i class="linecons-cog"></i>
 							<span class="title"><?= Lang::get('twovpn.dashboard'); ?></span>
 						</a>
 					</li>
 
 					<li>
-						<a href="#">
+						<a href="{{ route('purchased')}}">
 							<i class="linecons-globe"></i>
 							<span class="title"><?= Lang::get('twovpn.service'); ?></span>
 						</a>

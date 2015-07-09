@@ -47,6 +47,15 @@ Route::get('home/services/kingston/buy', [
 	'uses' => 'PaymentController@index'
 ]);
 
+Route::get('home/purchased', [
+	'as' => 'purchased',
+	'uses' => 'PurchesedController@index'
+]);
+
+Route::get('home/purchased/{id}', [
+	'uses' => 'PurchesedController@show'	
+]);
+
 Route::post('home/pay', [
 	'uses' => 'PaymentController@postBuy'
 ]);

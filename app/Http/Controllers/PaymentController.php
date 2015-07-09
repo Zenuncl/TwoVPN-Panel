@@ -43,6 +43,39 @@ class PaymentController extends Controller {
 
         $services->save();
 
+        $purchesed = new \App\Purchesed;
+        $purchesed->Username = $request->get('account');
+        $purchesed->PassWord = $request->get('password');
+        $purchesed->user_id = $user->id;
+
+        // 3000 半年套餐 - Half Year $30 USD
+        // 5000 一年套餐 - One Year $50 USD (半年后可换海龟套餐)
+        // 9000 两年套餐 - Two Year $90 USD (可随时切换海龟套餐)
+        // 8800 一年双套餐 - One Year With Project Beijing $88 USD (推荐)
+        
+        if ($request->get('price') == 3000) 
+        {
+            $serviceNameSet = "云端套餐 30 USD 半年套餐";
+        }
+
+        if ($request->get('price') == 5000) 
+        {
+            $serviceNameSet = "云端套餐 50 USD 一年套餐";
+        }
+
+        if ($request->get('price') == 9000) 
+        {
+            $serviceNameSet = "云端套餐 90 USD 两年套餐";
+        }
+
+        if ($request->get('price') == 8800) 
+        {
+            $serviceNameSet = "云端海龟套餐 88 USD 一年套餐";
+        }
+
+        $purchesed->ServiceName = $serviceNameSet;
+        $purchesed->save();
+
         return redirect($this->homePath());
 
     }
