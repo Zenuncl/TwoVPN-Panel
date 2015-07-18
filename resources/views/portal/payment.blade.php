@@ -17,7 +17,7 @@
 							
 							<br>
 
-							<form action="{{ url('home/pay') }}" method="POST" role="form" class="form-horizontal">
+							<form action="{{ url('home/pay') }}" method="POST" role="form" class="form-horizontal" id="PaymentForm">
 								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
@@ -56,27 +56,12 @@
 										<input type="password" class="form-control" id="password" name="password" placeholder="请输入非常用密码~">
 									</div>
 								</div>
-  
-  								<script
-    								src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    								data-key="pk_test_55qsM1PZ5USDOOUeDhdv1GVF"
-    								data-image="/img/documentation/checkout/marketplace.png"
-    								data-name="TwoVPN.com 支付平台"
-    								data-description="您正在TwoVPN支付购买某VPN服务"
-    								data-currency="usd"
-    								data-bitcoin=true
-    								data-alipay=true
-    								>
+  								
+  								<input type="hidden" id="stripeToken" name="stripeToken"/>
+    								<input type="hidden" id="stripeEmail" name="stripeEmail"/>
 
-    								$('.stripe-button').click(function(event){
-   										var self = $(this);
-    									var amount = 0;
-     									amount = $('#price').val();
-    									amount = self.attr('data-amount');
-  									});
-  								</script>
 							</form>
-							
+							<input type="button" class="btn btn-primary btn-default" id="customerPayButton" Value="Make Payment">
 						</div>
 					</div>
 					
@@ -86,6 +71,7 @@
 @endsection
 
 @section('script')
-	<script src="https://js.stripe.com/v2"></script>
-	<script src="{{{asset('./js/stripe.js')}}}"></script>
+	<!--<script src="https://js.stripe.com/v2"></script>-->
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+	<script src="{{{asset('./js/stripe.js')}}}"></script>-
 @endsection

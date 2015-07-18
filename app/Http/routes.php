@@ -11,7 +11,8 @@
 |
 */
 
-//Route::get('/', 'WelcomeController@index');
+// Route::get('/', 'WelcomeController@mainpage');
+
 Route::get('/', [
 	'as' =>'index',
 	'uses' => 'IndexController@index'
