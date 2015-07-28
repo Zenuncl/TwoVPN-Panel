@@ -61,7 +61,7 @@
     								<input type="hidden" id="stripeEmail" name="stripeEmail"/>
 
 							</form>
-							<input type="button" class="btn btn-primary btn-default" id="customerPayButton" Value="Make Payment">
+							<input type="button" class="btn btn-info" id="customerPayButton" Value="Make Payment">
 						</div>
 					</div>
 					

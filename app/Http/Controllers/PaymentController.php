@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Services;
+use App\Models\Rad\Check;
 use Illuminate\Http\Request;
 use Illuminate\Database;
 use Illuminate\Database\Eloquent\Model;
@@ -42,6 +43,8 @@ class PaymentController extends Controller {
         $services->Value = md5($request->get('password'));
 
         $services->save();
+        
+
 
         $purchesed = new \App\Purchesed;
         $purchesed->Username = $request->get('account');
@@ -52,7 +55,7 @@ class PaymentController extends Controller {
         // 5000 一年套餐 - One Year $50 USD (半年后可换海龟套餐)
         // 9000 两年套餐 - Two Year $90 USD (可随时切换海龟套餐)
         // 8800 一年双套餐 - One Year With Project Beijing $88 USD (推荐)
-        
+
         if ($request->get('price') == 3000) 
         {
             $serviceNameSet = "云端套餐 30 USD 半年套餐";

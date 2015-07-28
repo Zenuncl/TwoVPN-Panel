@@ -27,7 +27,7 @@
 
 		var handler = StripeCheckout.configure({
 			key: 'pk_test_55qsM1PZ5USDOOUeDhdv1GVF',
-			image: '/img/documentation/checkout/marketplace.png',
+			image: '/assets/images/logo.png',
 			token: function(token) {
 				$("#stripeToken").val(token.id);
 				$("#stripeEmail").val(token.email);
