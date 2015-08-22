@@ -1,6 +1,6 @@
         <div class="container small">
           <p class="pull-left">
-            <i class="fa fa-heart-o"></i> Made With Love By <a href="https://www.shacas.com">Shacas</a>. <br>
+            <i class="fa fa-heart-o"></i> Made With Love By <a href="https://www.shacas.com">Shacas Studio</a>. <br>
             <i class="fa fa-copyright"></i> Copyright 2015. TheMaple Network Inc. All Rights Reserved.
           </p>
 

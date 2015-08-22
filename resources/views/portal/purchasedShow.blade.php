@@ -6,7 +6,7 @@
 		<div class="col-lg-6">
                       	<section class="panel">
                           	<header class="panel-heading">
-                              	Service Information / 服务详情
+                              	Service Information / 服务简介
                           	</header>
                           	
                           	<div class="panel-body">
@@ -26,13 +26,6 @@
 			Billing Cycle: Yearly
 			</div>
 			<br>
-			<div class="from-group">
-			Username: {{ $purchased->UserName}}
-			</div>
-			<br>
-			<div class="from-group">
-			PassWord: (保密，MD5加密)
-                          	</div>
                       	</section>
                  	</div>
 
@@ -47,6 +40,26 @@
                           	</div>
                       	</section>
                  	</div>
+            </div>
+
+            <div class="row">
+            	<div class="col-lg-12">
+            		<section class="panel">
+            			<header class="panel-heading">
+            				Detail Service Information / 服务详情
+            			</header>
+
+				<div class="panel-body">
+					<div class="from-group">
+					Username: {{ $purchased->UserName}}
+					</div>
+					<br>
+					<div class="from-group">
+					PassWord: (保密，MD5加密)
+		                          	</div>
+				</div>
+            		</section>
+            	</div>
             </div>
 
 @endsection
